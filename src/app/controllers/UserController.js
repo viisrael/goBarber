@@ -38,11 +38,6 @@ class UserController {
       ),
     });
 
-    console.log(req.body.name);
-    console.log(req.body.oldPassword);
-    console.log(req.body.password);
-    console.log(req.body.confirmPassword);
-
     if (!(await schema.isValid(req.body))) {
       return res.status(400).json({ error: 'Validation fails' });
     }
